@@ -1,0 +1,4 @@
+codigoEmail
+    ao enviar testa, se codigo errado aparece um erro
+telaInicialAluno
+    quando aperta em turmas anteriores, aparecem abaixo as turmas anteriores e o botão some
