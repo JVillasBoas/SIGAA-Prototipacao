@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGAA</title>
+</head>
+<body>
+    <style>
+        .janela{
+            position: absolute;
+            width: 30%;
+            height: 40%;
+            left: 35%;
+            top: 30%;
+            border: 2px solid black;
+        }
+    </style>
+    <header>
+        <img src="" width="100" height="100">
+        <a href="perfilProfessor.html">Nome do professor </a><br>
+    </header>
+    <hr>
+    <nav>
+        <button>Grade de horários</button>
+        <button  onclick="abreOpcoesEnsino();">Plano de ensino</button>
+        <div class="janela" id="planoEnsino" style="display: none;">
+            <input type="checkbox">
+            <label>Turma x</label>
+            <br>
+            <input type="checkbox">
+            <label>Turma y</label>
+            <br>
+            <input type="checkbox" checked>
+            <label>Turma z</label>
+            <br>
+            ...
+            <br>
+            <input type="file"><br><button onclick="fechaOpcoesEnsino()">Salvar</button>
+        </div>
+        <button  onclick="abreOpcoes();">+</button>
+        <div class="janela" id="mais" style="display: none;">
+            <input type="checkbox">
+            <label>Calendário Ano x</label>
+            <br>
+            <input type="checkbox">
+            <label>Declaração de Vinculo</label>
+            <br>
+            <input type="checkbox" checked>
+            <label>Plano de ensino</label>
+            <br>
+            ...
+            <br>
+            <button onclick="fechaOpcoes()">Salvar</button>
+        </div>
+    </nav>
+    <hr>
+    <main>
+        <h2>Suas turmas</h2>
+        <h3>Ano Atual</h3>
+        <a href="exemploTurmaProfessor.html">Exemplo de Turma - </a><a href="registrarNotas.html"> - Notas - </a><a href="registrarFrequencia.html"> - Frequência - </a><br><br>
+        <a href="exemploTurmaProfessor.html">Exemplo de Turma - </a><a href="registrarNotas.html"> - Notas - </a><a href="registrarFrequencia.html"> - Frequência - </a><br><br>
+        <a href="exemploTurmaProfessor.html">Exemplo de Turma - </a><a href="registrarNotas.html"> - Notas - </a><a href="registrarFrequencia.html"> - Frequência - </a><br><br>
+        <a href="exemploTurmaProfessor.html">Exemplo de Turma - </a><a href="registrarNotas.html"> - Notas - </a><a href="registrarFrequencia.html"> - Frequência - </a><br><br>
+        <a href="exemploTurmaProfessor.html">Exemplo de Turma - </a><a href="registrarNotas.html"> - Notas - </a><a href="registrarFrequencia.html"> - Frequência - </a><br><br>
+        <a href="exemploTurmaProfessor.html">Exemplo de Turma - </a><a href="registrarNotas.html"> - Notas - </a><a href="registrarFrequencia.html"> - Frequência - </a><br><br>
+        <a href="exemploTurmaProfessor.html">Exemplo de Turma - </a><a href="registrarNotas.html"> - Notas - </a><a href="registrarFrequencia.html"> - Frequência - </a><br><br>
+        <button> Ver turmas anteriores. </button>
+    </main>
+    <script>
+        function abreOpcoes(){
+            let div = document.querySelector("#mais");
+            
+            div.style = "display: block;";
+        }
+        function fechaOpcoes(){
+            let div = document.querySelector("#mais");
+            div.style = "display: none;";
+        }
+        function abreOpcoesEnsino(){
+            let div = document.querySelector("#planoEnsino");
+            div.style = "display: block;";
+        }
+        function fechaOpcoesEnsino(){
+            let div = document.querySelector("#planoEnsino");
+            div.style = "display: none;";
+        }
+    </script>
+</body>
+</html>

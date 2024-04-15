@@ -6,6 +6,16 @@
     <title>SIGAA</title>
 </head>
 <body>
+    <style>
+        .janela{
+            position: absolute;
+            width: 30%;
+            height: 40%;
+            left: 35%;
+            top: 30%;
+            border: 2px solid black;
+        }
+    </style>
     <header>
         <img src="" width="100" height="100">
         <a href="perfilAluno.html">Nome do aluno</a><br>
@@ -14,22 +24,59 @@
     <nav>
         <button>Atestado de matrícula Ano z</button>
         <button>Calendário Ano z</button>
-        <button>+</button>
+        <button  onclick="abreOpcoes();">+</button>
+        <div class="janela" id="mais" style="display: none;">
+            <input type="checkbox">
+            <label>Atestado de Matrícula Ano x</label>
+            <br>
+            <input type="checkbox">
+            <label>Atestado de Matrícula Ano y</label>
+            <br>
+            <input type="checkbox" checked>
+            <label>Atestado de Matrícula Ano z</label>
+            <br>
+            <input type="checkbox" checked>
+            <label>Calendário Ano z</label>
+            <br>
+            ...
+            <br>
+            <button onclick="fechaOpcoes()">Salvar</button>
+        </div>
     </nav>
     <hr>
     <main>
-        <h3>Tópicos Recentes  ></h3>
-        <a href="">Data - Componente - tópico</a>
-        <h2>Componentes Curriculares</h2>
-        <h3>Ano Atual</h3>
-        <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br>
-        <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br>
-        <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br>
-        <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br>
-        <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br>
-        <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br>
-        <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br><br>
-        <button>Ver turmas anteriores</button>
+        <div style="display: flex; flex-direction: row; gap: 10px;">
+        <div style="border-right: 1px solid gray;padding: 5px;">
+            <h3>Tópicos Recentes < ></h3>
+            <a href="">Data - Componente - tópico</a>
+        </div>
+        <div>
+            <h3>Comunicados Importantes < ></h3>
+            <a href="">Data - Comunicado</a>
+        </div>
+        </div>
+        <div>
+            <h2>Componentes Curriculares</h2>
+            <h3>Ano Atual</h3>
+            <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br>
+            <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br>
+            <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br>
+            <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br>
+            <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br>
+            <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br>
+            <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br><br>
+            <button>Ver turmas anteriores</button>
+        </div>
     </main>
+    <script>
+        function abreOpcoes(){
+            let div = document.querySelector("#mais");
+            div.style = "display: block;";
+        }
+        function fechaOpcoes(){
+            let div = document.querySelector("#mais");
+            div.style = "display: none;";
+        }
+    </script>
 </body>
 </html>
