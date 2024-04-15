@@ -7,6 +7,116 @@
     <title>Frequência</title>
 </head>
 <body>
-    
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        tr,td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+            padding: 8px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .janela{
+            position: absolute;
+            width: 30%;
+            height: 40%;
+            left: 35%;
+            top: 30%;
+            border: 2px solid black;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="janela" id="FrequenciaTurma" style="display: none;">
+        <select name="" id="">
+            <option value="">Turma x</option>
+            <option value="">Turma y</option>
+            <option value="">Turma z</option>
+        </select>
+        <input type="text">
+        <button onclick="fechaOpcoesTurma()">Salvar</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Engenharia de Software</th>
+                <th onclick="abreOpcoesTurma()">Trocar de Turma</th>
+                <th>Trocar de Data:<input type="date" name="data" id=""></th>
+                <th><a href="">Ver planilha completa</a></th>
+            </tr>
+            <tr>
+                <th>Matrícula</th>
+                <th>Aluno</th>
+                <th>Presente</th>
+                <th>Ausente</th>
+            </tr>
+            <tr>
+                <td>2022300894</td>
+                <td>Jéssica Januário dos Santos Villas Bôas</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>2022300000</td>
+                <td>Pedro Eduardo Protas dos Santos</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>2022300000</td>
+                <td>Rafael Pereira dos Santos</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>2022309994</td>
+                <td>Fernando Fonseca Silveira</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>2022398794</td>
+                <td>João Matrizes Fagundes</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>2022300974</td>
+                <td>Maria Eloisa da Cunha Machado</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </thead>
+    </table>
+    <br>
+    <button>Salvar</button>
+    <button>Salvar como Rascunho</button>
+    <button>Recuperar Rascunho</button>
+    <button>Importar Planilha</button>
+    <button>Exportar Planilha</button>
+    <button><a href="telaInicialProfessor.html">Voltar</a></button>
+
+    <script>
+        function fechaOpcoesTurma(){
+            let div = document.querySelector("#FrequenciaTurma");
+            div.style = "display: none;";
+        }
+        function abreOpcoesTurma(){
+            let div = document.querySelector("#FrequenciaTurma");
+            div.style = "display: block;";
+        }
+    </script>
+
 </body>
 </html>

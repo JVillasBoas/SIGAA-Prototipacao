@@ -18,12 +18,30 @@
             text-decoration: none;
             color: black;
         }
+        .janela {
+            position: absolute;
+            width: 30%;
+            height: 40%;
+            left: 35%;
+            top: 30%;
+            border: 2px solid black;
+            background-color: white;
+        }
     </style>
+    <div class="janela" id="Turma" style="display: none;">
+        <select name="" id="">
+            <option value="">Turma x</option>
+            <option value="">Turma y</option>
+            <option value="">Turma z</option>
+        </select>
+        <input type="text">
+        <button onclick="fechaOpcoesTurma()">Salvar</button>
+    </div>
     <table>
         <thead>
             <tr>
                 <th colspan="12">Engenharia de Software</th>
-                <th><a href="1">Trocar de Turma</a></th>
+                <th onclick="abreOpcoesTurma()">Trocar de Turma</th>
             </tr>
             <tr>
                 <th rowspan="2">Matrícula</th>
@@ -92,5 +110,17 @@
     <button>Importar Planilha</button>
     <button>Exportar Planilha</button>
     <button><a href="telaInicialProfessor.html">Voltar</a></button>
+
+    <script>
+        function fechaOpcoesTurma(){
+            let div = document.querySelector("#Turma");
+            div.style = "display: none;";
+        }
+        function abreOpcoesTurma(){
+            let div = document.querySelector("#Turma");
+            div.style = "display: block;";
+        }
+    </script>
+
 </body>
 </html>
