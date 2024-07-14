@@ -27,6 +27,36 @@
         nav{
             grid-area: nav;
         }
+        .janela{
+            position: absolute;
+            width: 40%;
+            height: 50%;
+            left: 30%;
+            top: 25%;
+            border: 2px solid black;
+            background-color: white;
+            padding: 10px;
+        }
+        #divparticipantes{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 10px;
+            overflow-y: scroll;
+        }
+        .participante{
+            width: 45%;
+            display: flex;
+            border: 1px solid black;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .topo{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     </style>
     <header>
         <h1>Código - Nome da disciplina - Carga Horária</h1> 
@@ -35,7 +65,7 @@
         Barra de Frequência x% 
     </nav>
     <aside>
-        <a href="participantes.html">Participantes</a><br>
+        <a onclick="abreParticipantes();">Participantes</a><br>
         <a href="frequencia.html">Frequência</a><br>
         <a href="planoEnsino.html">Plano de Ensino</a>
     </aside>
@@ -50,5 +80,43 @@
         <p>Tópico de Aula (Início - Fim)</p>
         <button onclick="window.location = 'telaInicialAluno.html'" >Voltar</button>
     </main>
+    <div class="janela" id="participantes" style="display: none;">
+        <div class="topo">
+            <h1>Participantes</h1>
+            <button onclick="fechaParticipantes();">X</button>
+        </div>
+        <div id="divparticipantes">
+            <div class="participante">
+                <img src="" width="50" height="50">
+                <h3>Nome do aluno</h3>
+            </div>
+            <div class="participante">
+                <img src="" width="50" height="50">
+                <h3>Nome do aluno</h3>
+            </div>
+            <div class="participante">
+                <img src="" width="50" height="50">
+                <h3>Nome do aluno</h3>
+            </div>
+            <div class="participante">
+                <img src="" width="50" height="50">
+                <h3>Nome do aluno</h3>
+            </div>
+            <div class="participante">
+                <img src="" width="50" height="50">
+                <h3>Nome do aluno</h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        function abreParticipantes(){
+            let div = document.querySelector("#participantes");
+            div.style = "display: block;";
+        }
+        function fechaParticipantes(){
+            let div = document.querySelector("#participantes");
+            div.style = "display: none;";
+        }
+    </script>
 </body>
 </html>
