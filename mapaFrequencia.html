@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequência</title>
+</head>
+<body>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        tr,td{
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th{
+            background-color: #f2f2f2;
+            text-align: left;
+            padding: 8px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .janela{
+            position: absolute;
+            width: 30%;
+            height: 40%;
+            left: 35%;
+            top: 30%;
+            border: 2px solid black;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="janela" id="FrequenciaComponente" style="display: none;">
+        <select name="" id="">
+            <option value="">Componente x</option>
+            <option value="">Componente y</option>
+            <option value="">Componente z</option>
+        </select>
+        <input type="text">
+        <button onclick="fechaOpcoesComponente()">Salvar</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Componente Curricular</th>
+                <th onclick="abreOpcoesComponente()">Trocar de Componente</th>
+    
+            </tr>
+            <tr>
+                <th>Data</th>
+                <th>Comparecimento</th>
+            </tr>
+            <tr>
+                <td>01/01/2024</td>
+                <td>Ausente</td>
+            </tr>
+            <tr>
+                <td>02/01/2024</td>
+                <td>Ausente</td>
+            </tr>
+            <tr>
+                <td>03/01/2024</td>
+                <td>Ausente</td>
+            </tr>
+            <tr>
+                <td>04/01/2024</td>
+                <td>Presente</td>
+            </tr>
+            <tr>
+                <th>Frequencia total (%)</th>
+                <td>75</td>
+            </tr>
+        </thead>
+    </table>
+    <br>
+    <button><a href="exemploComponenteAluno.html">Voltar</a></button>
+    <script>
+        function fechaOpcoesComponente(){
+            let div = document.querySelector("#FrequenciaComponente");
+            div.style = "display: none;";
+        }
+        function abreOpcoesComponente(){
+            let div = document.querySelector("#FrequenciaComponente");
+            div.style = "display: block;";
+        }
+    </script>
+
+</body>
+</html>
