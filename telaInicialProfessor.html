@@ -14,6 +14,12 @@
             left: 35%;
             top: 30%;
             border: 2px solid black;
+            background-color: white;
+        }
+        .topo{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     </style>
     <header>
@@ -33,8 +39,8 @@
             <input type="text">
             <input type="file"><br><button onclick="fechaOpcoesEnsino()">Salvar</button>
         </div>
+        <button onclick="window.location = 'calendarioAulas.html'">Calendário de Aulas</button>
         <button  onclick="abreOpcoes();">+</button>
-        <button  onclick="abreOpcoes();">-</button>
         <div class="janela" id="mais" style="display: none;">
             <input type="checkbox">
             <label>Calendário Ano x</label>
@@ -61,17 +67,28 @@
         <a href="exemploTurmaProfessor.html">Exemplo de Turma - </a><a href="registrarNotas.html"> - Notas - </a><a onclick="abreFrequencia()"> - Frequência - </a><br><br>
         <a href="exemploTurmaProfessor.html">Exemplo de Turma - </a><a href="registrarNotas.html"> - Notas - </a><a onclick="abreFrequencia()"> - Frequência - </a><br><br>
         <a href="exemploTurmaProfessor.html">Exemplo de Turma - </a><a href="registrarNotas.html"> - Notas - </a><a onclick="abreFrequencia()"> - Frequência - </a><br><br>
-        <button> Ver turmas anteriores. </button>
+        <button> Ver turmas anteriores </button>
         <div class="janela" id="frequencia" style="display: none;">
-            Data: <input type="date"> <input value="Entrar" type="button" onclick="window.location = 'registrarFrequencia.html';">
+            <div class="topo">
+                <h1>Participantes</h1>
+                <button onclick="fechaFrequencia();">X</button>
+            </div>
+            <div>
+                Por data: <input type="date"> <button onclick="window.location = 'registrarFrequenciaIndividual.html'">Acessar</button>
+            </div>
             <br>
-            <button onclick="fechaFrequencia();">Voltar</button>
+            ou
+            <br>
+            <div>
+                <button onclick="window.location = 'registrarFrequenciaCompleta.html'">
+                    Planilha Completa
+                </button>
+            </div>
         </div>
     </main>
     <script>
         function abreOpcoes(){
             let div = document.querySelector("#mais");
-            
             div.style = "display: block;";
         }
         function fechaOpcoes(){

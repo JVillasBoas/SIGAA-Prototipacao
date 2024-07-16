@@ -10,9 +10,8 @@
         body{
             display: grid;
             grid-template-columns: 1fr 3fr;
-            grid-template-rows: 1fr 1fr 3fr;
+            grid-template-rows: 1fr 3fr;
             grid-template-areas: "header header header"
-                                 "nav nav nav"
                                  "aside main main";
         }
         header{
@@ -23,9 +22,6 @@
         }
         aside{
             grid-area: aside;
-        }
-        nav{
-            grid-area: nav;
         }
         .janela{
             position: absolute;
@@ -59,32 +55,13 @@
         }
     </style>
     <header>
-        <h1>Código - Nome da disciplina - Carga Horária</h1> 
+        <h1>Matéria - Turma</h1> 
     </header>
-    <nav>
-        Barra de Frequência x% 
-    </nav>
     <aside>
         <a onclick="abreParticipantes();">Participantes</a><br>
-        <a href="mapaFrequencia.html">Frequência</a><br>
-        <div class="janela" id="frequencia" style="display: none;">
-            <div class="topo">
-                <h1>Participantes</h1>
-                <button onclick="fechaFrequencia();">X</button>
-            </div>
-            <div>
-                Por data: <input type="date"> <button onclick="window.location = 'registrarFrequenciaIndividual.html'">Acessar</button>
-            </div>
-            <br>
-            ou
-            <br>
-            <div>
-                <button onclick="window.location = 'registrarFrequenciaCompleta.html'">
-                    Planilha Completa
-                </button>
-            </div>
-        </div>
-        <a href="planoEnsino.html">Plano de Ensino</a>
+        <a onclick="abreFrequencia()">Frequência</a><br>
+        <a href="registrarNotas.html">Notas</a><br>
+        <a onclick="abrePlanoEnsino()">Plano de Ensino</a>
     </aside>
     <main>
         <p>Tópico de Aula (Início - Fim)</p>
@@ -96,6 +73,7 @@
         <p>Tópico de Aula (Início - Fim)</p>
         <p>Tópico de Aula (Início - Fim)</p>
         <button onclick="window.location = 'telaInicialAluno.html'" >Voltar</button>
+        <button onclick="abreTopicoAula()">Adicionar</button>
     </main>
     <div class="janela" id="participantes" style="display: none;">
         <div class="topo">
@@ -125,6 +103,33 @@
             </div>
         </div>
     </div>
+    <div class="janela" id="frequencia" style="display: none;">
+        <div class="topo">
+            <h1>Participantes</h1>
+            <button onclick="fechaFrequencia();">X</button>
+        </div>
+        <div>
+            Por data: <input type="date"> <button onclick="window.location = 'registrarFrequenciaIndividual.html'">Acessar</button>
+        </div>
+        <br>
+        ou
+        <br>
+        <div>
+            <button onclick="window.location = 'registrarFrequenciaCompleta.html'">
+                Planilha Completa
+            </button>
+        </div>
+    </div>
+    <div class="janela" id="planoEnsino" style="display: none;">
+        Selecione o arquivo:
+        <input type="file"><br><button onclick="fechaPlanoEnsino()">Salvar</button>
+    </div>
+    <div class="janela" id="topicoAula" style="display: none;">
+        Digite o tópico de aula:
+        <br><textarea rows="8" cols="70" name="" id=""></textarea>
+        <br><button onclick="fechaTopicoAula()">Salvar</button>
+        <button onclick="fechaTopicoAula()">Fechar</button>
+    </div>
     <script>
         function abreParticipantes(){
             let div = document.querySelector("#participantes");
@@ -132,6 +137,30 @@
         }
         function fechaParticipantes(){
             let div = document.querySelector("#participantes");
+            div.style = "display: none;";
+        }
+        function abreFrequencia(){
+            let div = document.querySelector("#frequencia");
+            div.style = "display: block;";
+        }
+        function fechaFrequencia(){
+            let div = document.querySelector("#frequencia");
+            div.style = "display: none;";
+        }
+        function abrePlanoEnsino(){
+            let div = document.querySelector("#planoEnsino");
+            div.style = "display: block;";
+        }
+        function fechaPlanoEnsino(){
+            let div = document.querySelector("#planoEnsino");
+            div.style = "display: none;";
+        }
+        function abreTopicoAula(){
+            let div = document.querySelector("#topicoAula");
+            div.style = "display: block;";
+        }
+        function fechaTopicoAula(){
+            let div = document.querySelector("#topicoAula");
             div.style = "display: none;";
         }
     </script>
