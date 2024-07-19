@@ -68,7 +68,24 @@
             <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br>
             <a href="exemploComponenteAluno.html">Exemplo de Componente</a><br><br>
             <button>Ver turmas anteriores</button>
+            <button onclick="abreCadastroTurma();">Cadastrar-se em turma</button>
         </div>
+
+        <div class="janela" id="cadastroTurma" style="display: none;">
+            Selecione as disciplina disponiveis: <br>
+            <input type="checkbox">Matemática aplicada à informática <br>
+            <input type="checkbox">Cálculo <br>
+            <input type="checkbox">Banco de Dados <br>
+            <input type="checkbox">Lógica de Programação <br>
+            <input type="checkbox">Ética <br>
+            <input type="checkbox">Inglês Profissional <br>
+            <input type="checkbox">Álgebra <br>
+            <input type="checkbox">Métodos da moderna administração empresarial <br>
+            <input type="checkbox">Engenharia de software <br>
+            <button onclick="fechaCadastroTurma()">Cadastrar-se</button>
+            <button onclick="fechaCadastroTurma()">Fechar</button>
+        </div>
+
     </main>
     <script>
         function abreOpcoes(){
@@ -77,6 +94,14 @@
         }
         function fechaOpcoes(){
             let div = document.querySelector("#mais");
+            div.style = "display: none;";
+        }
+        function abreCadastroTurma(){
+            let div = document.querySelector("#cadastroTurma");
+            div.style = "display: block;";
+        }
+        function fechaCadastroTurma(){
+            let div = document.querySelector("#cadastroTurma");
             div.style = "display: none;";
         }
     </script>

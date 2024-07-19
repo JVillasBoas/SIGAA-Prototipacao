@@ -61,7 +61,9 @@
         <a onclick="abreParticipantes();">Participantes</a><br>
         <a onclick="abreFrequencia()">Frequência</a><br>
         <a href="registrarNotas.html">Notas</a><br>
-        <a onclick="abrePlanoEnsino()">Plano de Ensino</a>
+        <a onclick="abrePlanoEnsino()">Plano de Ensino</a><br>
+        <a onclick="abreDiarioClasse()">Diário de classe</a><br>
+        <a href="calendarioAulas.html">Calendário da disciplina</a><br>
     </aside>
     <main>
         <p>Tópico de Aula (Início - Fim)</p>
@@ -124,6 +126,10 @@
         Selecione o arquivo:
         <input type="file"><br><button onclick="fechaPlanoEnsino()">Salvar</button>
     </div>
+    <div class="janela" id="diarioClasse" style="display: none;">
+        Selecione o arquivo:
+        <input type="file"><br><button onclick="fechaDiarioClasse()">Salvar</button>
+    </div>
     <div class="janela" id="topicoAula" style="display: none;">
         Digite o tópico de aula:
         <br><textarea rows="8" cols="70" name="" id=""></textarea>
@@ -153,6 +159,14 @@
         }
         function fechaPlanoEnsino(){
             let div = document.querySelector("#planoEnsino");
+            div.style = "display: none;";
+        }
+        function abreDiarioClasse(){
+            let div = document.querySelector("#diarioClasse");
+            div.style = "display: block;";
+        }
+        function fechaDiarioClasse(){
+            let div = document.querySelector("#diarioClasse");
             div.style = "display: none;";
         }
         function abreTopicoAula(){

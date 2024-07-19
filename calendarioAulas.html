@@ -172,6 +172,7 @@
             buttonContainer.innerHTML = `
                 <button onclick="registerAttendance()">Registrar Frequência</button>
                 <button onclick="createLessonTopic()">Criar Tópico de Aula</button>
+                <button onclick="createExtraClass()">Cadastrar Aula Extra</button>
                 <button onclick="clearSelection()">X</button>
             `;
         }
@@ -184,6 +185,10 @@
             alert('Criando tópico de aula...');
         }
 
+        function createExtraClass() {
+            alert('Cadastrando aula extra...');
+        }
+    
         function clearSelection() {
             const checkboxes = document.querySelectorAll('#days input[type="checkbox"]');
             checkboxes.forEach(checkbox => {

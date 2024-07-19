@@ -14,6 +14,7 @@
             <option value="" hidden selected >Usuário</option>
             <option value="valor1">Aluno</option>
             <option value="valor2">Professor</option>
+            <option value="valor3">Secretaria</option>
         </hr>
     </select>
     *Apenas para demonstração</p><button onclick="caminho();">Entrar</button><br>
@@ -26,8 +27,12 @@
         var caminho = document.getElementById("caminho").value;
         if(caminho == "valor1"){
             window.location = "telaInicialAluno.html";
-        }else if(caminho == "valor2"){
+        }
+        else if(caminho == "valor2"){
             window.location = "telaInicialProfessor.html";
+        }
+        else if(caminho == "valor3"){
+            window.location = "telaInicialSecretaria.html";
         }
     }
 </script>
