@@ -5,22 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        input[type="text"], select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: 1px solid #ccc;
+        }
+
+        p {
+            color: #ff0000;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
-    Usuário: <input type="text"><br>
-    Senha: <input type="text"><br>
-    <select name="Caminho" id="caminho">
-        <hr>
-            <option value="" hidden selected >Usuário</option>
+    <div class="login-container">
+        <h2>Login</h2>
+        <label for="usuario">Usuário:</label>
+        <input type="text" id="usuario"><br>
+        <label for="senha">Senha:</label>
+        <input type="text" id="senha"><br>
+        <label for="caminho">Selecione o Usuário:</label>
+        <select name="Caminho" id="caminho">
+            <option value="" hidden selected>Usuário</option>
             <option value="valor1">Aluno</option>
             <option value="valor2">Professor</option>
             <option value="valor3">Secretaria</option>
             <option value="valor4">Direção de Ensino</option>
             <option value="valor5">Pró-Reitoria</option>
-        </hr>
-    </select>
-    *Apenas para demonstração</p><button onclick="caminho();">Entrar</button><br>
-    Não consegue acessar a conta? <a href="recuperaConta.html">Clique aqui</a><br>
+        </select>
+        <p>*Apenas para demonstração</p>
+        <button onclick="caminho();">Entrar</button><br>
+        <a href="recuperaConta.html">Não consegue acessar a conta? Clique aqui</a><br>
+    </div>
 </body>
 </html>
 
@@ -38,7 +104,7 @@
         }
         else if(caminho == "valor4"){
             window.location = "telaInicialDirecaoEnsino.html";
-        } else if(caminho == "valor5") () {
+        } else if(caminho == "valor5"){
             window.location = "telaInicialProReitoria.html";
         }
     }
