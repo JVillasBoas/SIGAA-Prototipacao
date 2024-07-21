@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Aluno</title>
+</head>
+<body>
+    <style>
+        .janela{
+            position: absolute;
+            width: 30%;
+            height: 40%;
+            left: 35%;
+            top: 30%;
+            border: 2px solid black;
+            background-color: white;
+            padding: 10px;
+        }
+    </style>
+    <h2>Dados institucionais</h2>
+    Nome: <input type="text">
+    <br>
+    Carga Horária: <input type="number">
+    <br>
+    Período: <select name="" id="">
+        <option value="">1º ano/semestre</option>
+        <option value="">2º ano/semestre</option>
+        <option value="">3º ano/semestre</option>
+        <option value="">4º ano/semestre</option>
+    </select>
+    <button onclick="abreRequisitos()">Pré-Requisitos</button>
+    <br>
+    <button onclick="window.location='telaInicialDirecaoEnsino.html'">Salvar</button><button onclick="window.location='telaInicialDirecaoEnsino.html'">Voltar</button>
+    <div class="janela" id="requisitos" style="display: none;">
+        <h3>Matérias do Curso</h3>
+        <input type="checkbox">Matéria 1 <br>
+        <input type="checkbox">Matéria 2 <br>
+        <input type="checkbox">Matéria 3 <br>
+        <input type="checkbox">Matéria 4 <br>
+        <input type="checkbox">Matéria 5 <br>
+        <input type="checkbox">Matéria 6 <br>
+        <button onclick="fechaRequisitos();">Voltar</button>
+    </div>
+    <script>
+        function abreRequisitos(){
+            let div = document.querySelector("#requisitos");
+            div.style = "display: block;";
+        }
+        function fechaRequisitos(){
+            let div = document.querySelector("#requisitos");
+            div.style = "display: none;";
+        }
+    </script>
+</body>
+</html>

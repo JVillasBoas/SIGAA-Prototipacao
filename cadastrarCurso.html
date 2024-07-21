@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Curso</title>
+</head>
+<style>
+     .janela{
+            position: absolute;
+            width: 40%;
+            height: 50%;
+            left: 30%;
+            top: 25%;
+            border: 2px solid black;
+            background-color: white;
+            padding: 10px;
+        }
+</style>
+<body>
+    <h2>Dados do curso</h2>
+    Nome do curso: <input type="text"> 
+    <br>
+    Nível/grau: 
+    <select name="nivel">
+        <option value=""  hidden selected >Selecione um nível</option>
+            <option value="nivel1">Subsequente</option>
+            <option value="nivel2">Integrado</option>
+            <option value="nivel3">Superior</option>
+    </select>
+    <br>
+    Turno:
+    <select name="nivel">
+        <option value=""  hidden selected >Selecione um turno</option>
+            <option value="nivel1">Manhã</option>
+            <option value="nivel2">Tarde</option>
+            <option value="nivel3">Noite</option>
+    </select>
+    <br>
+    Pesquisar coordenador: <input type="text"><br>
+    Carga horária: <input type="number"><br>
+    Tempo limite para conclusão: <input type="number"><br>
+    Disciplinas do curso: <input type="text"><br>
+    <button>Salvar</button><button onclick="window.location='telaInicialSecretaria.html'">Voltar</button>
+</body>
+</html>

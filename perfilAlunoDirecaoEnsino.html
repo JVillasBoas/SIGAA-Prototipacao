@@ -33,28 +33,6 @@
                 </optgroup>
             </hr>
         </select>
-
-        <select name="select">
-            <hr>
-                <optgroup label="Ano">
-                    <option value=""  hidden selected >Calendário Acadêmico</option>
-                    <option value="valor1">Calendário Ano x</option>
-                    <option value="valor2">Calendário Ano y</option>
-                    <option value="valor3">Calendário Ano z</option>
-                </optgroup>
-            </hr>
-        </select>
-
-        <select name="select">
-            <hr>
-                <optgroup label="Orientação Acadêmica">
-                    <option value=""  hidden selected >Orientação Acadêmica</option>
-                    <option value="valor1">TCC</option>
-                    <option value="valor2">Oportunidades de estágio</option>
-                    <option value="valor3">Pós-graduações</option>
-                </optgroup>
-            </hr>
-        </select>
         
         <select name="select" onchange="window.location = 'pdfs/atestado.pdf'">
             <hr>
@@ -69,9 +47,7 @@
         <button onclick="abreAtestadoAusencia()">Atestado de ausência</button>
         <button><a href="pdfs/declaracao_vinculo.pdf">Declaração de vínculo do aluno</a></button>
         <button> Histórico do aluno </button>
-        <button> Comunicados importantes </button>
-       
-
+        <button onclick="abreTransCampus()">Transferência de Campus</button>
     </nav>
     <hr>
     <h2>Dados institucionais</h2>
@@ -81,16 +57,40 @@
     <p>Status</p>
     <p>Email</p>
     <p>Ano de entrada</p>
-    <button>Exibir dados pessoais</button>
-    <button onclick="window.location = 'telaInicialAluno.html'" >Voltar</button>
-
+    <button onclick="window.location = 'exemploDisciplinaDirecaoEnsino.html'" >Voltar</button>
+    <div class="janela" id="transferencia" style="display: none;">
+        Selecione o arquivo:
+        <input type="file"><br><button onclick="fechaAtestadoAusencia()">Salvar</button> <br>
+        <button onclick="fechaTransCampus();">Fechar</button>
+    </div>
     <div class="janela" id="atestadoAusencia" style="display: none;">
         Selecione o arquivo:
-        <input type="file"><br><button onclick="fechaAtestadoAusencia()">Salvar</button>
+        <input type="file"><br><button onclick="fechaAtestadoAusencia()">Salvar</button> <br>
+        <button onclick="fechaAtestadoAusencia();">Fechar</button>
     </div>
-
+    <div class="janela" id="suspensao" style="display: none;">
+        Selecione o período:
+        <input type="date"> à <input type="date"> <br>
+        Importar arquivo:
+        <input type="file"> <br>
+        <button onclick="fechaSuspensao()">Salvar</button> <br>
+        <button onclick="fechaSuspensao();">Fechar</button>
+    </div>
+    <div class="janela" id="expulsao" style="display: none;">
+        Importar arquivo:
+        <input type="file"> <br>
+        <button onclick="fechaExpulsao()">Salvar</button> <br>
+        <button onclick="fechaExpulsao();">Fechar</button>
+    </div>
     <script>
-
+        function abreTransCampus(){
+            let div = document.querySelector("#transferencia");
+            div.style = "display: block;";
+        }
+        function fechaTransCampus(){
+            let div = document.querySelector("#transferencia");
+            div.style = "display: none;";
+        }
         function abreAtestadoAusencia(){
             let div = document.querySelector("#atestadoAusencia");
             div.style = "display: block;";
@@ -99,7 +99,22 @@
             let div = document.querySelector("#atestadoAusencia");
             div.style = "display: none;";
         }
-        
+        function abreSuspensao(){
+            let div = document.querySelector("#suspensao");
+            div.style = "display: block;";
+        }
+        function fechaSuspensao(){
+            let div = document.querySelector("#suspensao");
+            div.style = "display: none;";
+        }
+        function abreExpulsao(){
+            let div = document.querySelector("#expulsao");
+            div.style = "display: block;";
+        }
+        function fechaExpulsao(){
+            let div = document.querySelector("#expulsao");
+            div.style = "display: none;";
+        }
     </script>
 
 </body>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direção de Ensino</title>
+</head>
+<body>
+    <style>
+        .janela{
+            position: absolute;
+            width: 30%;
+            height: 40%;
+            left: 35%;
+            top: 30%;
+            border: 2px solid black;
+            background-color: white;
+        }
+    </style>
+    <header>
+        <img src="" width="100" height="100">
+        <a href="perfilDirecaoEnsino.html">Nome do funcionário da direção de ensino</a><br>
+    </header>
+    <hr>
+    <nav>
+        <button onclick="window.location = 'cadastrarCurso.html'">Cadastrar Curso</button>
+        <button onclick="window.location = 'cadastrarProfessor.html'">Cadastrar Professor</button>
+        <button onclick="abreCancelamento()">Cancelar Aula</button>
+    </nav>
+    <hr>
+    <main>
+        <h2>Cursos</h2>
+        <a href="exemploCursoDirecaoEnsino.html">Refrigeração e Climatização</a><br>
+        <a href="exemploCursoDirecaoEnsino.html">Eletrotécnica</a><br>
+        <a href="exemploCursoDirecaoEnsino.html">Geoprocessamento</a><br>
+        <a href="exemploCursoDirecaoEnsino.html">Automação Industrial</a><br>
+        <a href="exemploCursoDirecaoEnsino.html">Informática para Internet</a><br>
+        <a href="exemploCursoDirecaoEnsino.html">Fabricação Mecânica</a><br>
+        <a href="exemploCursoDirecaoEnsino.html">Engenharia Mecânica</a><br>
+        <a href="exemploCursoDirecaoEnsino.html">Arquitetura e Urbanismo</a><br>
+        <a href="exemploCursoDirecaoEnsino.html">Análise e Desenvolvimento de Sistemas</a><br>
+    </main>
+    <hr>
+    <div class="janela" id="cancelamento" style="display: none;">
+        Data: <input type="date">
+        <br>
+        <button onclick="fechaCancelamento()">Salvar</button>
+        <button onclick="fechaCancelamento()">Voltar</button>
+    </div>
+    <script>
+        function abreCancelamento(){
+            let div = document.querySelector("#cancelamento");
+            div.style = "display: block";
+        }
+        function fechaCancelamento(){
+            let div = document.querySelector("#cancelamento");
+            div.style = "display: none";
+        }
+    </script>
+</body>
+</html>

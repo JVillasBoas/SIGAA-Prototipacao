@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGAA</title>
+</head>
+<body>
+    <style>
+        .janela{
+            position: absolute;
+            width: 30%;
+            height: 40%;
+            left: 35%;
+            top: 30%;
+            border: 2px solid black;
+            background-color: white;
+        }
+        .topo{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+    <header>
+        <img src="" width="100" height="100">
+        <a>Nome do professor coordenador</a><br>
+    </header>
+    <hr>
+    <nav>
+        <button>Grade de horários</button>
+        <button  onclick="abreOpcoesCurso();">Plano de Curso</button>
+        <div class="janela" id="planoCurso" style="display: none;">
+            <input type="file"><br><button onclick="fechaOpcoesCurso()">Salvar</button>
+        </div>
+        <button>+</button>
+    </nav>
+    <hr>
+    <main>
+        <h2>Informações do curso</h2>
+        <h3>Ano Atual</h3>
+        <a>Exemplo de Turma - </a><br>
+        <a>Exemplo de Turma - </a><br>
+        <a>Exemplo de Turma - </a><br>
+        <a>Exemplo de Turma - </a><br>
+        <a>Exemplo de Turma - </a><br>
+        <a>Exemplo de Turma - </a><br>
+        <a>Exemplo de Turma - </a><br>
+        <button> Ver turmas anteriores </button>
+    </main>
+    <script>
+        function abreOpcoesCurso(){
+            let div = document.querySelector("#planoCurso");
+            div.style = "display: block;";
+        }
+        function fechaOpcoesCurso(){
+            let div = document.querySelector("#planoCurso");
+            div.style = "display: none;";
+        }
+    </script>
+</body>
+</html>

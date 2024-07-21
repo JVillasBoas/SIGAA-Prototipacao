@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Professor</title>
+</head>
+<body>
+    <h2>Dados institucionais</h2>
+    Matrícula: <input type="password"> <button>Gerar matrícula</button> 
+    Email: <input type="password"> <button>gerar email</button>
+    <br>
+    <h2>Dados Pessoais</h2>
+    Nome: <input type="text"><br>
+    Sexo: 
+    <select name="sexo">
+        <option value=""  hidden selected >Selecione um curso</option>
+            <option value="curso1">Feminino</option>
+            <option value="curso2">Masculino</option>
+    </select>
+    <br>
+    Data de nasicmento: <input type="date"><br>
+    CPF: <input type="number"><br>
+    RG: <input type="number"><br>
+    CEP: <input type="number"><br>
+    Bairro: <input type="text"><br>
+    Telefone de contato: <input type="number"><br>
+    <button onclick="abreDisciplinas();">Disciplinas</button>
+    <button>Salvar</button><button onclick="window.location='telaInicialDirecaoEnsino.html'">Voltar</button>
+    <div class="janela" id="disciplinas" style="display: none;">
+        <h3>Disciplinas</h3>
+        <input type="checkbox">Matéria 1 <br>
+        <input type="checkbox">Matéria 2 <br>
+        <input type="checkbox">Matéria 3 <br>
+        <input type="checkbox">Matéria 4 <br>
+        <input type="checkbox">Matéria 5 <br>
+        <input type="checkbox">Matéria 6 <br>
+        <button onclick="fechaDisciplinas();">Voltar</button>
+    </div>
+    <script>
+        function abreDisciplinas(){
+            let div = document.querySelector("#disciplinas");
+            div.style = "display: block";
+        }
+        function fechaDisciplinas(){
+            let div = document.querySelector("#disciplinas");
+            div.style = "display: none";
+        }
+    </script>
+</body>
+</html>

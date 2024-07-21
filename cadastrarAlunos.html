@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Alunos</title>
+</head>
+<body>
+    <h2>Dados institucionais</h2>
+    Curso: 
+    <select name="curso">
+        <option value=""  hidden selected >Selecione um curso</option>
+            <option value="curso1">Geoprocessamento</option>
+            <option value="curso2">Informática para internet</option>
+            <option value="curso3">Automação Industrial</option>
+            <option value="curso3">Fabricação Mecânica</option> 
+    </select>  
+    <br>
+    Nível: 
+    <select name="nivel">
+        <option value=""  hidden selected >Selecione um nível</option>
+            <option value="nivel1">Subsequente</option>
+            <option value="nivel2">Integrado</option>
+            <option value="nivel3">Superior</option>
+    </select>
+    <br>
+    Disciplinas pré-definidas<input type="radio"><br>
+    Disciplinas personalizadas<input type="radio">
+    <br>
+    Importar planilha:<input type="file">
+    <button onclick="window.locate = 'telaInicialAluno.html'">voltar</button>
+</body>
+</html>
