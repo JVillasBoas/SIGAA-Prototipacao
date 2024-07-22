@@ -6,6 +6,62 @@
     <title>Cadastrar Alunos</title>
 </head>
 <body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+input, select {
+    background-color: #1b3a5e;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    cursor: pointer;
+    font-size: 1em;
+    box-sizing: border-box;
+    color: #ddd;
+}
+input[type="radio"] {
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+ input[type="file"] {
+    margin-bottom: 20px;
+    background-color: #ddd;
+ }
+
+button {
+    background-color: #1b3a5e; /* Azul */
+    color: white; /* Texto branco */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s; /* Efeito de transição */
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+    color: white;
+    strong {
+    color: #007bff; /* Azul, para manter a consistência */
+    font-weight: bold; /* Torna o texto mais forte */
+}
+}
+    </style>
     <h2>Dados institucionais</h2>
     Curso: 
     <select name="curso">
@@ -27,7 +83,7 @@
     Disciplinas pré-definidas<input type="radio"><br>
     Disciplinas personalizadas<input type="radio">
     <br>
-    Importar planilha:<input type="file">
+    Importar planilha:<input id="input_um" type="file">
     <button onclick="window.locate = 'telaInicialAluno.html'">voltar</button>
 </body>
 </html>

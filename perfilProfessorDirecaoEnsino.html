@@ -5,24 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do professor</title>
 </head>
+<style>
+        nav select, nav button {
+    max-width: 100%; /* Garante que o elemento não ultrapasse a largura da tela */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    background-color: #1b3a5e;
+    border: none;
+    color: white;
+    
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button {
+    max-width: 100%; /* Garante que o elemento não ultrapasse a largura da tela */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    background-color: #1b3a5e;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+main {
+    background-color: #123456; /* Cor de fundo do conteúdo principal */
+    color: #ffffff;
+}
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #444;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #123456; /* Cor de fundo do cabeçalho */
+    color: #ffffff;
+    padding: 20px;
+}
+
+nav {
+    background-color: #05668d;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #02475e;
+}
+
+/* Estilos para destacar informações institucionais com uma nova abordagem */
+.informacoes-institucionais {
+    background-color: #d1e7dd;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 1.1em;
+    border-left: 5px solid #05668d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+.informacoes-institucionais h2 {
+    color: #05668d;
+    margin-bottom: 15px;
+}
+
+.informacoes-institucionais ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.informacoes-institucionais li {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.informacoes-institucionais strong {
+    color: #02475e;
+}
+</style>
 <body>
     <header>
         <img src="" width="100" height="100">
-        <a href="perfilProfessor.html">Nome do professor</a><br>
+       Nome do professor
     </header>
     <hr>
     <nav>
-        <button>Grade de Horários</button>
-        <button>Declaração de vínculo</button>
+        <button onclick="window.location = 'pdfs/Grade_Discente.pdf'"> Grade de horário </button>
+        <button onclick="window.location = 'pdfs/declaracao_vinculo.pdf'">Declaração de vínculo </button>
     </nav>
     <hr>
+    <div class="informacoes-institucionais">
     <h2>Dados institucionais</h2>
-    <p>Matrícula</p>
-    <p>Curso</p>
-    <p>Nível</p>
-    <p>Status</p>
-    <p>Email</p>
-    <p>Ano de entrada</p>
-    <button onclick="window.location = 'telaInicialProfessor.html'" >Voltar</button>
+    <ul>
+        <li><strong>Matrícula:</strong> 123456</li>
+        <li><strong>Matéria:</strong> Física </li>
+        <li><strong>Nível:</strong> Ensino Médio </li>
+        <li><strong>Status:</strong> Ativo</li>
+        <li><strong>Email:</strong> professor@instituicao.edu</li>
+        <li><strong>Ano de entrada:</strong> 2020</li>
+    </ul>
+</div>
+   <br> <button onclick="window.location = 'telaInicialProfessor.html'" >Voltar</button>
 </body>
 </html>

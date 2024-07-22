@@ -23,15 +23,67 @@
             text-decoration: none;
             color: black;
         }
-        .janela {
-            position: absolute;
-            width: 30%;
-            height: 40%;
-            left: 35%;
-            top: 30%;
-            border: 2px solid black;
-            background-color: white;
-        }
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+tr, td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #1b3a5e;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #1b3a5e;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.janela {
+    position: fixed; /* Changed from absolute to fixed for better positioning */
+    width: 30%;
+    height: 40%;
+    left: 35%; /* Center the modal horizontally */
+    top: 30%; /* Center the modal vertically */
+    border: 2px solid #1b3a5e;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it sits above other content */
+}
+
+button {
+    background-color: #1b3a5e; /* Azul */
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1b3a5e;
+}
     </style>
 </head>
 <body>
