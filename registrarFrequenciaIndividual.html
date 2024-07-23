@@ -5,79 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frequência</title>
-</head>
-<body>
     <style>
-        table{
+        table {
             width: 100%;
             border-collapse: collapse;
         }
-        tr,td{
+        tr, td {
             border: 1px solid #dddddd;
             text-align: left;
             padding: 8px;
         }
-        th{
+        th {
             background-color: #f2f2f2;
             text-align: left;
             padding: 8px;
         }
-        a{
+        a {
             text-decoration: none;
             color: black;
         }
         body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
-    margin: 0;
-}
-
-.janela {
-    display: none; /* Inicialmente escondido, será mostrado via JavaScript */
-    position: fixed;
-    width: 30%;
-    height: auto; /* Ajustado para auto para acomodar o conteúdo internamente */
-    left: 35%;
-    top: 30%;
-    border: 2px solid #1b3a5e;
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-select, input[type="text"] {
-    width: 90%; /* Ajuste para ocupar a maior parte da janela modal */
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-button {
-    background-color: #1b3a5e; /* Azul */
-    color: white;
-    padding: 10px 20px;
-    margin: 5px 0;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #1b3a5e;
-}
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+        .janela {
+            display: none;
+            position: fixed;
+            width: 30%;
+            height: auto;
+            left: 35%;
+            top: 30%;
+            border: 2px solid #1b3a5e;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        select, input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #1b3a5e;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #1b3a5e;
+        }
     </style>
 </head>
 <body>
-    <div class="janela" id="FrequenciaTurma" style="display: none;">
+    <div class="janela" id="FrequenciaTurma">
         <select name="" id="">
             <option value="">Turma x</option>
             <option value="">Turma y</option>
@@ -99,38 +93,69 @@ button:hover {
                 <th>Aluno</th>
                 <th colspan="2">Presente</th>
             </tr>
+        </thead>
+        <tbody>
             <tr>
                 <td>2022300894</td>
                 <td>Jéssica Januário dos Santos Villas Bôas</td>
-                <td colspan="2"><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"></td>
+                <td colspan="2">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca" onclick="marcaAnteriores(this)">
+                </td>
             </tr>
-            
             <tr>
                 <td>2022300000</td>
                 <td>Pedro Eduardo Protas dos Santos</td>
-                <td colspan="2" ><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"></td>
+                <td colspan="2">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca" onclick="marcaAnteriores(this)">
+                </td>
             </tr>
             <tr>
                 <td>2022300000</td>
                 <td>Rafael Pereira dos Santos</td>
-                <td colspan="2" ><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"></td>
+                <td colspan="2">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca" onclick="marcaAnteriores(this)">
+                </td>
             </tr>
             <tr>
                 <td>2022309994</td>
                 <td>Fernando Fonseca Silveira</td>
-                <td colspan="2" ><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"></td>
+                <td colspan="2">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca" onclick="marcaAnteriores(this)">
+                </td>
             </tr>
             <tr>
                 <td>2022398794</td>
                 <td>João Matrizes Fagundes</td>
-                <td colspan="2" ><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"></td>
+                <td colspan="2">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca" onclick="marcaAnteriores(this)">
+                </td>
             </tr>
             <tr>
                 <td>2022300974</td>
                 <td>Maria Eloisa da Cunha Machado</td>
-                <td colspan="2" ><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"></td>
+                <td colspan="2">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca">
+                    <input type="checkbox" class="presenca" onclick="marcaAnteriores(this)">
+                </td>
             </tr>
-        </thead>
+        </tbody>
     </table>
     <br>
     <button>Salvar</button>
@@ -138,18 +163,32 @@ button:hover {
     <button>Recuperar Rascunho</button>
     <button>Importar Planilha</button>
     <button>Exportar Planilha</button>
+    <button>Marcar presença geral</button>
     <button><a href="telaInicialProfessor.html">Voltar</a></button>
 
     <script>
-        function fechaOpcoesTurma(){
+        function fechaOpcoesTurma() {
             let div = document.querySelector("#FrequenciaTurma");
-            div.style = "display: none;";
+            div.style.display = "none";
         }
-        function abreOpcoesTurma(){
+
+        function abreOpcoesTurma() {
             let div = document.querySelector("#FrequenciaTurma");
-            div.style = "display: block;";
+            div.style.display = "block";
+        }
+
+        function marcaAnteriores(checkbox) {
+            const checkboxes = checkbox.parentElement.querySelectorAll('.presenca');
+            let found = false;
+            for (let i = checkboxes.length - 1; i >= 0; i--) {
+                if (checkboxes[i] === checkbox) {
+                    found = true;
+                }
+                if (found) {
+                    checkboxes[i].checked = true;
+                }
+            }
         }
     </script>
-
 </body>
 </html>

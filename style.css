@@ -40,6 +40,10 @@ nav button {
     font-size: 1em;
 }
 
+.logoff{
+    margin-left: 70%;
+}
+
 nav button:hover {
     background-color: #163355;
 }

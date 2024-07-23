@@ -5,85 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planilha Completa</title>
     <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 20px;
         }
-        tr, td {
+
+        tr, td, th {
             border: 1px solid #dddddd;
             text-align: left;
             padding: 8px;
         }
+
         th {
-            background-color: #f2f2f2;
-            text-align: left;
-            padding: 8px;
+            background-color: #1b3a5e;
+            color: white;
         }
+
         a {
             text-decoration: none;
-            color: black;
+            color: #1b3a5e;
         }
-        body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
-    margin: 0;
-}
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
+        a:hover {
+            text-decoration: underline;
+        }
 
-tr, td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
+        .janela {
+            position: fixed;
+            width: 30%;
+            height: 40%;
+            left: 35%;
+            top: 30%;
+            border: 2px solid #1b3a5e;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
 
-th {
-    background-color: #1b3a5e;
-    color: white;
-}
+        button {
+            background-color: #1b3a5e;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
 
-a {
-    text-decoration: none;
-    color: #1b3a5e;
-}
+        button:hover {
+            background-color: #1b3a5e;
+        }
 
-a:hover {
-    text-decoration: underline;
-}
-
-.janela {
-    position: fixed; /* Changed from absolute to fixed for better positioning */
-    width: 30%;
-    height: 40%;
-    left: 35%; /* Center the modal horizontally */
-    top: 30%; /* Center the modal vertically */
-    border: 2px solid #1b3a5e;
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Ensure it sits above other content */
-}
-
-button {
-    background-color: #1b3a5e; /* Azul */
-    color: white;
-    padding: 10px 20px;
-    margin: 5px 0;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #1b3a5e;
-}
+        
     </style>
 </head>
 <body>
@@ -160,125 +144,127 @@ button:hover {
             <tr>
                 <td>2022300000</td>
                 <td>Pedro Eduardo Protas dos Santos</td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
             </tr>
             <tr>
                 <td>2022300001</td>
                 <td>Rafael Pereira dos Santos</td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                
             </tr>
             <tr>
                 <td>2022309994</td>
                 <td>Manuela Cabral</td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
-                <td><input type="checkbox" name="" id=""></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
+                <td><select><option>1</option><option>2</option><option>3</option></select></td>
             </tr>
         </tbody>
     </table>
+    <button onclick="window.locate = 'telaInicialProfessor.html'">Voltar</button>
     <script>
         function abreOpcoesTurma() {
             document.getElementById("FrequenciaTurma").style.display = "block";

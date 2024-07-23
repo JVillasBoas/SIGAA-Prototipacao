@@ -4,115 +4,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disciplina</title>
-</head>
-<body>
     <style>
-        body{
+        body {
             display: grid;
             grid-template-columns: 1fr 3fr;
-            grid-template-rows: 1fr 1fr 3fr;
-            grid-template-areas: "header header header"
-                                 "nav nav nav"
-                                 "aside main main";
+            grid-template-rows: auto auto 1fr;
+            grid-template-areas: 
+                "header header"
+                "nav nav"
+                "aside main";
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            gap: 10px;
         }
-        header{
+
+        header {
             grid-area: header;
+            background-color: #1b3a5e;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
         }
-        main{
-            grid-area: main;
-        }
-        aside{
-            grid-area: aside;
-        }
-        nav{
+
+        nav {
             grid-area: nav;
+            background-color: #1b3a5e;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
         }
-        .janela{
+
+        aside {
+            grid-area: aside;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
+            grid-area: main;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .janela {
             position: absolute;
             width: 40%;
             height: 50%;
             left: 30%;
             top: 25%;
-            border: 2px solid black;
+            border: 2px solid #1b3a5e;
             background-color: white;
-            padding: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
         }
-        #divparticipantes{
+
+        #divparticipantes {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;
             gap: 10px;
             overflow-y: scroll;
+            height: 70%;
         }
-        .participante{
+
+        .participante {
             width: 45%;
             display: flex;
-            border: 1px solid black;
-            justify-content: space-around;
+            flex-direction: column;
             align-items: center;
-        }
-        .topo{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
         }
-        body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-    color: #333;
-}
-input {
-  
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 20px;
-    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
-    cursor: pointer;
-    font-size: 1em;
-    box-sizing: border-box;
-    color: #ddd;
-}
-button {
-    background-color: #1b3a5e; /* Verde */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 10px; /* Espaço abaixo do botão */
-}
 
-button:hover {
-    background-color: #1b3a5e;
-}
+        .topo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-a {
-    color: #007bff; /* Azul */
-    text-decoration: none;
-    font-size: 16px;
-}
+        input {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            font-size: 1em;
+            width: 100%;
+            border-radius: 5px;
+        }
 
-a:hover {
-    text-decoration: underline;
-}
+        button {
+            background-color: #1b3a5e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
 
-h3 {
-    color: #444;
-    margin-top: 20px; /* Espaço acima do título */
-    margin-bottom: 10px; /* Espaço abaixo do título */
-}
+        button:hover {
+            background-color: #145080;
+        }
+
+        a {
+            color: #1b3a5e;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #145080;
+            text-decoration: underline;
+        }
+
+        h1, h3 {
+            color: #1b3a5e;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+        h3 {
+            font-size: 1.2em;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .janela button {
+            margin-top: 20px;
+        }
     </style>
+</head>
+<body>
     <header>
-        <h1>Código - Nome da disciplina - Carga Horária</h1> 
+        <h2>Código - Nome da disciplina - Carga Horária</h2> 
     </header>
     <nav>
         Barra de Frequência x% 
@@ -126,15 +176,12 @@ h3 {
                 <button onclick="fechaFrequencia();">X</button>
             </div>
             <div>
-                Por data: <input type="date"> <button onclick="window.location = 'registrarFrequenciaIndividual.html'">Acessar</button>
+                Por data: <input type="date"> 
+                <button onclick="window.location = 'registrarFrequenciaIndividual.html'">Acessar</button>
             </div>
-            <br>
-            ou
-            <br>
+            <br>ou<br>
             <div>
-                <button onclick="window.location = 'registrarFrequenciaCompleta.html'">
-                    Planilha Completa
-                </button>
+                <button onclick="window.location = 'registrarFrequenciaCompleta.html'">Planilha Completa</button>
             </div>
         </div>
         <a href="pdfs/planoensino.pdf">Plano de Ensino</a>
@@ -148,7 +195,7 @@ h3 {
         <p>Tópico de Aula (Início - Fim)</p>
         <p>Tópico de Aula (Início - Fim)</p>
         <p>Tópico de Aula (Início - Fim)</p>
-        <button onclick="window.location = 'telaInicialAluno.html'" >Voltar</button>
+        <button onclick="window.location = 'telaInicialAluno.html'">Voltar</button>
     </main>
     <div class="janela" id="participantes" style="display: none;">
         <div class="topo">
@@ -168,25 +215,4 @@ h3 {
                 <img src="" width="50" height="50">
                 <h3>Nome do aluno</h3>
             </div>
-            <div class="participante">
-                <img src="" width="50" height="50">
-                <h3>Nome do aluno</h3>
-            </div>
-            <div class="participante">
-                <img src="" width="50" height="50">
-                <h3>Nome do aluno</h3>
-            </div>
-        </div>
-    </div>
-    <script>
-        function abreParticipantes(){
-            let div = document.querySelector("#participantes");
-            div.style = "display: block;";
-        }
-        function fechaParticipantes(){
-            let div = document.querySelector("#participantes");
-            div.style = "display: none;";
-        }
-    </script>
-</body>
-</html>
+            <div class="participante
